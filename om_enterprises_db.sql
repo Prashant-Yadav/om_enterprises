@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2015 at 09:08 AM
+-- Generation Time: Jun 16, 2015 at 09:18 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `brand` (
   `thickness` varchar(30) NOT NULL,
   `stock` int(10) NOT NULL,
   PRIMARY KEY (`brand_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `brand`
@@ -41,23 +41,26 @@ CREATE TABLE IF NOT EXISTS `brand` (
 
 INSERT INTO `brand` (`brand_no`, `brand_name`, `dimension`, `thickness`, `stock`) VALUES
 (1, 'star M.R.', '8x4', '6mm', 975),
-(2, 'marine', '8x4', '', 53),
-(3, 'star', '8x3', '', 110),
-(4, 'marine', '8x3', '', 1010),
-(5, 'ganga', '8x4', '', 550),
-(6, 'ganga', '8x3', '', 110),
-(7, 'star', '7x4', '', 950),
-(8, 'star', '7x3', '', 4550),
-(9, 'star', '6x4', '', 90),
-(10, 'star', '6x3', '', 0),
-(11, 'marine', '7x4', '', 100),
-(12, 'marine', '7x3', '', 0),
-(13, 'marine', '6x4', '', 790),
-(14, 'marine', '6x3', '', 0),
-(15, 'ganga', '7x4', '', 100),
-(16, 'ganga', '7x3', '', 0),
-(17, 'ganga', '6x4', '', 0),
-(18, 'ganga', '6x3', '', 925);
+(2, 'ultra marine M.R.', '8x4', '4mm', 53),
+(3, 'star M.R.', '8x3', '4mm', 110),
+(4, 'ultra marine M.R.', '8x3', '4mm', 1010),
+(7, 'star M.R.', '7x4', '4mm', 950),
+(8, 'star M.R.', '7x3', '4mm', 4550),
+(9, 'star M.R.', '6x4', '4mm', 90),
+(10, 'star M.R.', '6x3', '4mm', 0),
+(11, 'ultra marine M.R.', '7x4', '4mm', 100),
+(12, 'ultra marine M.R.', '7x3', '4mm', 0),
+(13, 'ultra marine M.R.', '6x4', '4mm', 790),
+(14, 'ultra marine M.R.', '6x3', '4mm', 0),
+(19, 'star M.R.', '8x4', '4mm', 100),
+(21, 'star M.R.', '8x4', '8mm', 50),
+(23, 'star M.R.', '8x3', '6mm', 10),
+(24, 'star M.R.', '7x4', '6mm', 10),
+(25, 'star M.R.', '7x3', '6mm', 10),
+(26, 'star M.R.', '6x4', '6mm', 10),
+(27, 'star M.R.', '6x3', '6mm', 10),
+(28, 'star M.R.', '8x4', '8mm', 50),
+(29, 'star M.R.', '8x4', '8mm', 50);
 
 -- --------------------------------------------------------
 
