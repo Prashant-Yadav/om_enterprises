@@ -29,10 +29,10 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
             <li class="active">
-                <a href="../index.php"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Home</a>
             </li>
             <li>
-                <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+                <a href="view_stock.php"><i class="fa fa-fw fa-bar-chart-o"></i> View Stock</a>
             </li>
             <li>
                 <a href="add_item.php"><i class="fa fa-fw fa-table"></i> Add New Item</a>
