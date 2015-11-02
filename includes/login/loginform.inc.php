@@ -8,7 +8,7 @@
 			$userName = $_POST['username']; 
 			$password = $_POST['password'];
 
-			$passwordHash = md5($password); 
+			$passwordHash = md5($password);
 
 			//check if username and password are not empty
 			if(!empty($userName) and !empty($passwordHash)){
