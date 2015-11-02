@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 16, 2015 at 09:18 AM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: Jun 22, 2015 at 06:14 PM
+-- Server version: 5.5.43
+-- PHP Version: 5.3.10-1ubuntu3.18
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `brand` (
   `thickness` varchar(30) NOT NULL,
   `stock` int(10) NOT NULL,
   PRIMARY KEY (`brand_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `brand`
@@ -60,7 +60,7 @@ INSERT INTO `brand` (`brand_no`, `brand_name`, `dimension`, `thickness`, `stock`
 (26, 'star M.R.', '6x4', '6mm', 10),
 (27, 'star M.R.', '6x3', '6mm', 10),
 (28, 'star M.R.', '8x4', '8mm', 50),
-(29, 'star M.R.', '8x4', '8mm', 50);
+(30, 'saraswati', '7x3', '16mm', 500);
 
 -- --------------------------------------------------------
 

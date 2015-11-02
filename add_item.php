@@ -67,34 +67,36 @@
 	        	<h1>
 	        		Add new items
 	        	</h1>
-
-	        	<form action="#" method="POST" class="form-inline">
-	        		<pre>
-	        			<strong>Brand Name</strong>			<input type="text" class="form-control" placeholder="name" name="brandName" id="brandName">
-	        			<strong>Dimension</strong>			<select class="form-control" name="itemDimension" id="itemDimension">
-	        													<option value="8x4">8x4</option>
-	        													<option value="8x4">8x3</option>
-	        													<option value="7x4">7x4</option>
-	        													<option value="7x3">7x3</option>
-	        													<option value="6x4">6x4</option>
-	        													<option value="6x3">6x3</option>
-	        												</select>
-	        			<strong>Thickness</strong>			<select class="form-control" name="itemThickness" id="itemThickness">
-	        													<option value="4mm">4mm</option>
-	        													<option value="6mm">6mm</option>
-	        													<option value="8mm">8mm</option>
-	        													<option value="12mm">12mm</option>
-	        													<option value="15mm">15mm</option>
-	        													<option value="16mm">16mm</option>
-	        													<option value="18mm">18mm</option>
-	        													<option value="19mm Blockboard">19mm Blockboard</option>
-	        													<option value="25mm board">25mm board</option>
-	        												</select>
-	        			<strong>Available Stock</strong>	<input type="text" class="form-control" placeholder="0" name="availableStock" id="availableStock">
-	        			<br>
-	        			<input type="submit" class="btn btn-default" label="Submit" value="Submit" id="submitItem" name="submitItem">	
-	        		</pre>   		
-	        	</form>
+	        	<div class="form-group">
+	        		<form action="#" method="POST" class="form-inline" role="form">
+		        		<pre>
+		        			<strong>Brand Name</strong>			<input type="text" class="form-control" placeholder="name" name="brandName" id="brandName"><br>
+		        			<strong>Dimension</strong>			<select class="form-control" name="itemDimension" id="itemDimension">
+		        													<option value="8x4">8x4</option>
+		        													<option value="8x4">8x3</option>
+		        													<option value="7x4">7x4</option>
+		        													<option value="7x3">7x3</option>
+		        													<option value="6x4">6x4</option>
+		        													<option value="6x3">6x3</option>
+		        												</select><br>
+		        			<strong>Thickness</strong>			<select class="form-control" name="itemThickness" id="itemThickness">
+		        													<option value="4mm">4mm</option>
+		        													<option value="6mm">6mm</option>
+		        													<option value="8mm">8mm</option>
+		        													<option value="12mm">12mm</option>
+		        													<option value="15mm">15mm</option>
+		        													<option value="16mm">16mm</option>
+		        													<option value="18mm">18mm</option>
+		        													<option value="19mm Blockboard">19mm Blockboard</option>
+		        													<option value="25mm board">25mm board</option>
+		        												</select><br>
+		        			<strong>Available Stock</strong>	<input type="text" class="form-control" placeholder="0" name="availableStock" id="availableStock">
+		        			<br>
+		        			<input type="submit" class="btn btn-default form-control" label="Submit" value="Submit" id="submitItem" name="submitItem">	
+		        		</pre>   		
+	        		</form>
+	        	</div>	<!-- /.form-group-->
+	        	
 	        </div>  <!-- /#page-wrapper-->
       
 			</div> <!-- /#wrapper -->

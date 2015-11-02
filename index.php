@@ -15,9 +15,9 @@
       $itemQuantity = NULL;
       $itemThickness = NULL;
       $brandName = NULL;
-      $brandNameList = array('star M.R.', 'star W.P.', 'ultra marine M.R.', 'ultra marine W.P.', 'akshar', 'woodbond', 'kingfisher');
-      $brandDimensionList = array('8x4', '8x3', '7x4', '7x3', '6x4', '6x3');
-      $brandThicknessLIst = array('4mm', '6mm', '8mm', '12mm', '15mm', '16mm', '18mm', '19mm Blockboard', '25mm board');
+      # $brandNameList = array('star M.R.', 'star W.P.', 'ultra marine M.R.', 'ultra marine W.P.', 'akshar', 'woodbond', 'kingfisher');
+      # $brandDimensionList = array('8x4', '8x3', '7x4', '7x3', '6x4', '6x3');
+      # $brandThicknessLIst = array('4mm', '6mm', '8mm', '12mm', '15mm', '16mm', '18mm', '19mm Blockboard', '25mm board');
 
       if (isset($_POST['submit_stock'])) {
         # update according to form submission by user
@@ -118,12 +118,15 @@
                     <!-- selection of brand name -->
                     <select class="form-control" name="brandName" id="brandName">
                       <?php
-                        foreach ($brandNameList as $brandNameValue) {
-                          # iteratively generate options for brand names...
-                          echo "<option "; 
-                          if ($brandName == $brandNameValue) 
-                            echo 'selected'; 
-                          echo " value='".$brandNameValue."'>".$brandNameValue."</option><br>";
+
+                        $selectBrands = mysqli_query($con, "SELECT DISTINCT `brand_name` FROM `brand`");
+                        while ($brandRow = mysqli_fetch_assoc($selectBrands)) {
+                            $brandNameValue = $brandRow['brand_name'];
+                            # iteratively generate options for brand names...
+                            echo "<option "; 
+                            if ($brandName == $brandNameValue) 
+                              echo 'selected'; 
+                            echo " value='".$brandNameValue."'>".$brandNameValue."</option><br>";
                         }
                       ?>
                     </select>
@@ -132,8 +135,11 @@
                     <!-- selection of item dimension -->
                     <select class="form-control" name="itemDimension" id="itemDimension">
                       <?php
-                        foreach ($brandDimensionList as $dimensionValue) {
+
+                        $selectDimension = mysqli_query($con, "SELECT DISTINCT `dimension` FROM `brand`");
+                        while ($dimensionRow = mysqli_fetch_assoc($selectDimension)) {
                           # iteratively generate options for brand dimensions...
+                          $dimensionValue = $dimensionRow['dimension'];
                           echo "<option "; 
                           if ($itemDimension == $dimensionValue) 
                             echo 'selected'; 
@@ -146,8 +152,11 @@
                     <!-- selection of item thickness -->
                     <select class="form-control" name="itemThickness" id="itemThickness">
                       <?php
-                        foreach ($brandThicknessLIst as $thicknessValue) {
+                        
+                        $selectThickness = mysqli_query($con, "SELECT DISTINCT `thickness` FROM `brand`");
+                        while ($thicknessRow = mysqli_fetch_assoc($selectThickness)) {
                           # iteratively generate options for brand thickness...
+                          $thicknessValue = $thicknessRow['thickness'];
                           echo "<option "; 
                           if ($itemThickness == $thicknessValue) 
                             echo 'selected'; 
