@@ -8,5 +8,4 @@
 		echo 'Failed to connect to the database : '.mysqli_connect_error();
 		die();
 	}
-
 ?>

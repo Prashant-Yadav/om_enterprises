@@ -37,6 +37,37 @@
       <!-- Custom styles for this template -->
       <link href="assets/css/justified-nav.css" rel="stylesheet">
 
+      <style type="text/css">
+        @media print
+        {
+        .noprint {
+          display:none;
+        }
+
+        .currentDate{
+          display:inline;
+        }
+        
+        .printable{
+          display: block;
+        }
+
+        h2{
+          text-align: center;
+        }
+        
+        table{
+          vertical-align: center;
+        }
+        }
+      </style>
+
+      <!--<script type="text/javascript">
+      function printFunction(){
+        window.print();
+      }
+      </script>
+      -->
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
       <!--[if lt IE 9]>
@@ -53,11 +84,11 @@
         <!-- div for main pages-->
         <div id="page-wrapper">
 
-        <div>
+        <div class="noprint">
           <h1>View stock</h1>
         </div>
 
-          <form method="POST" action="#" class="form-inline">
+          <form method="POST" action="#" class="form-inline noprint">
             <label> Brand Name </label> 
             <select class="form-control" name="brandName" id="brandName">
               
@@ -77,7 +108,13 @@
 
           <br>
             
-          <?php 
+          <?php
+            require_once "dompdf/dompdf_config.inc.php";
+
+            $dompdf = new DOMPDF();
+            
+            $pdf_content = '
+
             if (isset($_POST['submitView'])) {
               
               if (!empty($_POST['brandName'])) {
@@ -85,30 +122,45 @@
                 $brandNameSelected = $_POST['brandName'];
                 if ($queryRun = mysqli_query($con, "SELECT * FROM `brand` WHERE `brand_name` = '$brandNameSelected'")) {
                   # select details of brand...
-                  echo "Stock details of <strong>".$brandNameSelected."</strong><br>";
-                  echo "<table class='table table-hover table-bordered'>
-                          <tbody>
-                            <tr>
-                              <th>Dimension</th>
-                              <th>Thickness</th>
-                              <th>Available</th>
-                            </tr>";
+                  echo "<div class='printable'>
+                          <h2>Stock details of <strong>".$brandNameSelected."</strong></h2><br>";
+                  echo "  <table class='table table-hover table-bordered'>
+                            <tbody>
+                              <tr>
+                                <th>Dimension</th>
+                                <th>Thickness</th>
+                                <th>Available</th>
+                              </tr>";
                   while ($queryRow = mysqli_fetch_assoc($queryRun)) {
                     # code...
-                      echo "<tr>
-                              <td>".$queryRow['dimension']."</td>
-                              <td>".$queryRow['thickness']."</td>
-                              <td>".$queryRow['stock']."</td>
-                            </tr>";
+                      echo "  <tr>
+                                <td>".$queryRow['dimension']."</td>
+                                <td>".$queryRow['thickness']."</td>
+                                <td>".$queryRow['stock']."</td>
+                              </tr>";
                   }
-                  echo "  </tbody>
-                        </table>";
+                  echo "    </tbody>
+                          </table>
+                        </div>";
                 }
                 else
                   echo "Query Unsuccessful.";
 
               }
             }
+            ';
+           ?>
+           <form name="print" action="#" method="POST">
+              <input type="submit" value="Print" class="noprint" name="print">
+           </form>
+
+           <?php
+              if (isset($_POST['print'])) {
+                # code...
+                $dompdf->load_html($pdf_content);
+                $dompdf->render();
+                $dompdf->stream('data.pdf');
+              }
            ?>
 
         </div>  <!-- /#page-wrapper-->
