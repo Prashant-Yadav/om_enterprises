@@ -31,6 +31,7 @@
 	      <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	      <meta name="viewport" content="width=device-width, initial-scale=1">
 	      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	      <link rel="shortcut icon" href="assets/ico/favicon.ico" type="image/x-icon"> 
 	      <title>Add New Item</title>
 
 	      <!-- Bootstrap core css -->
@@ -47,6 +48,9 @@
 
 	      <!-- Custom styles for this template -->
 	      <link href="assets/css/justified-nav.css" rel="stylesheet">
+
+	      <!-- Custom styles for login -->
+      	  <link href="assets/css/signin.css" rel="stylesheet">
 
 	      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,8 +74,8 @@
 	        	<div class="form-group">
 	        		<form action="#" method="POST" class="form-inline" role="form">
 		        		<pre>
-		        			<strong>Brand Name</strong>			<input type="text" class="form-control" placeholder="name" name="brandName" id="brandName"><br>
-		        			<strong>Dimension</strong>			<select class="form-control" name="itemDimension" id="itemDimension">
+		        			<strong>Brand Name</strong>			<input type="text" class="form-control" placeholder="name" name="brandName" id="brandName" required><br>
+		        			<strong>Dimension</strong>			<select class="form-control" name="itemDimension" id="itemDimension" required>
 		        													<option value="8x4">8x4</option>
 		        													<option value="8x4">8x3</option>
 		        													<option value="7x4">7x4</option>
@@ -79,7 +83,7 @@
 		        													<option value="6x4">6x4</option>
 		        													<option value="6x3">6x3</option>
 		        												</select><br>
-		        			<strong>Thickness</strong>			<select class="form-control" name="itemThickness" id="itemThickness">
+		        			<strong>Thickness</strong>			<select class="form-control" name="itemThickness" id="itemThickness" required>
 		        													<option value="4mm">4mm</option>
 		        													<option value="6mm">6mm</option>
 		        													<option value="8mm">8mm</option>
@@ -90,9 +94,9 @@
 		        													<option value="19mm Blockboard">19mm Blockboard</option>
 		        													<option value="25mm board">25mm board</option>
 		        												</select><br>
-		        			<strong>Available Stock</strong>	<input type="text" class="form-control" placeholder="0" name="availableStock" id="availableStock">
+		        			<strong>Available Stock</strong>	<input type="number" class="form-control" placeholder="0" name="availableStock" id="availableStock" required>
 		        			<br>
-		        			<input type="submit" class="btn btn-default form-control" label="Submit" value="Submit" id="submitItem" name="submitItem">	
+		        			<input type="submit" class="btn btn-default form-control" label="Submit" value="Submit" id="submitItem" name="submitItem" required>	
 		        		</pre>   		
 	        		</form>
 	        	</div>	<!-- /.form-group-->

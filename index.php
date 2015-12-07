@@ -62,6 +62,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <link rel="icon" href="assets/ico/favicon.ico" type="image/vnd.microsoft.icon"/>
       <title>Home</title>
 
       <!-- Bootstrap core css -->
@@ -79,6 +80,8 @@
       <!-- Custom styles for this template -->
       <link href="assets/css/justified-nav.css" rel="stylesheet">
 
+      <!-- Custom styles for login -->
+      <link href="assets/css/signin.css" rel="stylesheet">
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
       <!--[if lt IE 9]>
@@ -98,7 +101,6 @@
           <!-- Jumbotron -->
           <div class="jumbotron">
             <h1>Om Enterprises</h1>
-            <p class="lead">test data </p>
           </div>
             
           <!-- form for stock management -->
@@ -173,13 +175,13 @@
                   <td>
                     <!-- quantity of items dispatched -->
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="0" name="itemDispatch" id="itemDispatch">
+                      <input type="number" class="form-control" placeholder="0" name="itemDispatch" id="itemDispatch">
                     </div>
                   </td>
                   <td>
                     <!-- quantity of items to be added -->
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="0" name="itemAdd" id="itemAdd">
+                      <input type="number" class="form-control" placeholder="0" name="itemAdd" id="itemAdd">
                     </div>
                   </td>
                 </tr>

@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 22, 2015 at 06:14 PM
--- Server version: 5.5.43
--- PHP Version: 5.3.10-1ubuntu3.18
+-- Generation Time: Dec 07, 2015 at 10:14 AM
+-- Server version: 5.5.46
+-- PHP Version: 5.3.10-1ubuntu3.21
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `brand` (
   `thickness` varchar(30) NOT NULL,
   `stock` int(10) NOT NULL,
   PRIMARY KEY (`brand_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
 
 --
 -- Dumping data for table `brand`
@@ -56,11 +56,16 @@ INSERT INTO `brand` (`brand_no`, `brand_name`, `dimension`, `thickness`, `stock`
 (21, 'star M.R.', '8x4', '8mm', 50),
 (23, 'star M.R.', '8x3', '6mm', 10),
 (24, 'star M.R.', '7x4', '6mm', 10),
-(25, 'star M.R.', '7x3', '6mm', 10),
+(25, 'star M.R.', '7x3', '6mm', 5),
 (26, 'star M.R.', '6x4', '6mm', 10),
 (27, 'star M.R.', '6x3', '6mm', 10),
 (28, 'star M.R.', '8x4', '8mm', 50),
-(30, 'saraswati', '7x3', '16mm', 500);
+(30, 'saraswati', '7x3', '16mm', 500),
+(31, 'd', '8x4', '4mm', 0),
+(32, 'fd', '8x4', '4mm', 0),
+(33, 'fds', '8x4', '4mm', 54),
+(34, 'jeet', '8x4', '4mm', 43),
+(35, '6758', '8x4', '4mm', 0);
 
 -- --------------------------------------------------------
 
@@ -82,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `user_info` (
 --
 
 INSERT INTO `user_info` (`id`, `user_name`, `password`, `first_name`, `last_name`) VALUES
-(1, 'test1', '32250170a0dca92d53ec9624f336ca24', 'test', 'test');
+(1, 'test1', '098f6bcd4621d373cade4e832627b4f6', 'test', 'test');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

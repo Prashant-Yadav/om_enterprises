@@ -8,13 +8,13 @@
 <nav class="navbar navbar-inverse navbar-fixed-top noprint" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">Om Enterprises</a>
+        <a class="navbar-brand" href="index.php">Om Enterprises</a>
     </div>
 
     <!-- Top Menu items -->
     <ul class="nav navbar-right top-nav">
         <li>
-            <a href="#" class="currentDate">
+            <a href="#" class="currentDate date">
               <?php
                 echo date("d/m/Y");
               ?>  

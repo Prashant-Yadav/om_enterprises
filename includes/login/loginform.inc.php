@@ -44,28 +44,48 @@
 		}
 	}
 ?>
-	<br>
-	<h2 style="text-align:center">Please Login</h2>
-	<!-- User login form starts here-->
-	<form class="container" action="<?php echo $currentFile; ?>" method="post" id="loginForm">
-        
-        <div class="row">
 
-            <div class="col-md-4"><br>
-                <form action="<?php echo $currentFile; ?>" name="loginForm" method="post">
-                    <label>Username </label>
-                    <input type="text" name="username" /><br><br>
-                    <label>Password </label>
-                    <input type="password" name="password" /><br> <br> 
-                    <button type="submit" id="loginButton" name="loginButton">Login</button>
-                </form>
-            </div>
-        
-        </div>
-        <!-- .row -->
-	</form> <!-- User login form ends here-->
+<head>
+	
+	<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-	<script>
-		var myElement = document.querySelector(".header");
-		myElement.style.backgroundColor = "white";
-	</script>
+	<title>Login</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="assets/css/signin.css" rel="stylesheet">
+
+	<!-- Just for debugging purposes. Don't actually copy this line! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<br>
+		<!-- User login form starts here-->
+		<form class="form-signin" action="<?php echo $currentFile; ?>" method="post" role="form">
+		    
+		    <!--<div class="row">-->
+		    	<h2 class="form-signin-heading">Please sign in</h2>
+		        
+                <h4><label>Username </label></h4>
+                <input type="text" name="username" class="form-control" placeholder="username" required autofocus/>
+                <h4><label>Password </label></h4>
+                <input type="password" name="password" class="form-control" placeholder="password" required/><br> <br> 
+                <button type="submit" id="loginButton" name="loginButton" class="btn btn-lg btn-primary btn-block">Login</button>
+		    
+		    <!--</div>-->
+		    <!-- .row -->
+		</form> <!-- User login form ends here-->
+	</div>
+	
+
+	
+</body>

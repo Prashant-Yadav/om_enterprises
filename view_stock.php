@@ -20,6 +20,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <link rel="shortcut icon" href="assets/ico/favicon.ico" type="image/x-icon">
       <title>View Stock</title>
 
       <!-- Bootstrap core css -->
@@ -36,6 +37,9 @@
 
       <!-- Custom styles for this template -->
       <link href="assets/css/justified-nav.css" rel="stylesheet">
+
+      <!-- Custom styles for login -->
+      <link href="assets/css/signin.css" rel="stylesheet">
 
       <style type="text/css">
         @media print
@@ -109,11 +113,7 @@
           <br>
             
           <?php
-            require_once "dompdf/dompdf_config.inc.php";
-
-            $dompdf = new DOMPDF();
             
-            $pdf_content = '
 
             if (isset($_POST['submitView'])) {
               
@@ -148,20 +148,20 @@
 
               }
             }
-            ';
-           ?>
+          ?>
+          <!-- code to print file for view_stock
            <form name="print" action="#" method="POST">
               <input type="submit" value="Print" class="noprint" name="print">
            </form>
 
-           <?php
-              if (isset($_POST['print'])) {
-                # code...
-                $dompdf->load_html($pdf_content);
-                $dompdf->render();
-                $dompdf->stream('data.pdf');
-              }
-           ?>
+           #<?php
+              #if (isset($_POST['print'])) {
+              #  $dompdf->load_html($pdf_content);
+              #  $dompdf->render();
+              #  $dompdf->stream('data.pdf');
+            #  }
+           #?>
+           -->
 
         </div>  <!-- /#page-wrapper-->
       
